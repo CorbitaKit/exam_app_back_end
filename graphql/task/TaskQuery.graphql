@@ -1,0 +1,4 @@
+extend type Query @namespace(field: "App\\GraphQL\\Resolvers") @guard {
+    tasks: [Task!]! @field(resolver: "TaskResolver@resolveAll")
+    task(id: ID!): Task! @field(resolver: "TaskResolver@resolveFindById")
+}

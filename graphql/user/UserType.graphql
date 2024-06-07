@@ -1,0 +1,8 @@
+type User {
+    name: String!
+    email: String!
+    id: ID!
+    tasks: [Task!]! @hasMany
+    created_at: DateTime!
+    updated_at: DateTime!
+}

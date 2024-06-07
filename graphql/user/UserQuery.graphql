@@ -1,0 +1,4 @@
+extend type Query @namespace(field: "App\\GraphQL\\Resolvers") {
+    users: [User!]! @field(resolver: "UserResolver@resolveAll")
+    user(id: ID!): User! @field(resolver: "UserResolver@resolveFindById")
+}

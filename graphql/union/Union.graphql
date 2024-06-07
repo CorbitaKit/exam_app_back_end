@@ -1,0 +1,3 @@
+union TaskRequest = Task | TaskErrors
+
+union UserRequest = User | UserErrors

@@ -1,0 +1,7 @@
+extend type Mutation @namespace(field: "App\\GraphQL\\Resolvers") @guard {
+    createTask(input: TaskInput! @spread): TaskRequest!
+        @field(resolver: "TaskResolver@resolveCreate")
+    updateTask(id: ID!, input: TaskInput! @spread): TaskRequest!
+        @field(resolver: "TaskResolver@resolveUpdate")
+    deleteTask(id: ID!): Boolean! @field(resolver: "TaskResolver@resolveDelete")
+}

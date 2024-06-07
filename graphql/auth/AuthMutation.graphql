@@ -1,0 +1,5 @@
+extend type Mutation @namespace(field: "App\\GraphQL\\Resolvers") {
+    login(input: AuthInput! @spread): Auth!
+        @field(resolver: "UserResolver@resolveLogin")
+    logout(email: String!): Auth! @field(resolver: "UserResolver@resolveLogout")
+}

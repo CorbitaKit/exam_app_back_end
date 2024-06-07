@@ -1,0 +1,6 @@
+input TaskInput {
+    title: String
+    description: String
+    user_id: Int
+    status: String
+}

@@ -1,0 +1,7 @@
+extend type Mutation @namespace(field: "App\\GraphQL\\Resolvers") {
+    createUser(input: UserInput! @spread): UserRequest!
+        @field(resolver: "UserResolver@resolveCreate")
+    updateUser(id: ID!, input: UserInput! @spread): UserRequest!
+        @field(resolver: "UserResolver@resolveUpdate")
+    deleteUser(id: ID!): Boolean! @field(resolver: "UserResolver@resolveDelete")
+}

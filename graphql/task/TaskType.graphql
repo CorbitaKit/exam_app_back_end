@@ -1,0 +1,15 @@
+type Task {
+    id: ID!
+    title: String!
+    description: String!
+    status: TaskStatus!
+    user_id: Int!
+    user: User! @belongsTo
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+enum TaskStatus {
+    TODO @enum(value: "To Do")
+    DONE @enum(value: "Done")
+}

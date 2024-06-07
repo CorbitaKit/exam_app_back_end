@@ -1,0 +1,6 @@
+type Auth {
+    token: String
+    user: User
+    status: String!
+    message: String!
+}
